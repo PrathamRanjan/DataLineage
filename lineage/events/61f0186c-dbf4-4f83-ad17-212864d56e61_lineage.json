@@ -1,0 +1,42 @@
+{
+  "eventType": "COLUMN_LINEAGE",
+  "eventTime": "2025-08-24T22:08:33.892969",
+  "run": {
+    "runId": "61f0186c-dbf4-4f83-ad17-212864d56e61"
+  },
+  "columnLineage": {
+    "fields": [
+      {
+        "downstream": "net_amount",
+        "upstream": [
+          "quantity",
+          "unit_price",
+          "discount"
+        ],
+        "transformation": "quantity * unit_price - discount"
+      },
+      {
+        "downstream": "total_value",
+        "upstream": [
+          "quantity",
+          "unit_price"
+        ],
+        "transformation": "quantity * unit_price"
+      },
+      {
+        "downstream": "estimated_profit",
+        "upstream": [
+          "net_amount"
+        ],
+        "transformation": "net_amount * 0.30"
+      },
+      {
+        "downstream": "order_size_category",
+        "upstream": [
+          "net_amount"
+        ],
+        "transformation": "categorize_order_size(net_amount)"
+      }
+    ]
+  }
+}

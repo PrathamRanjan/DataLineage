@@ -78,3 +78,9 @@
 2025-08-24 21:42:53,438 - tools.impact_analysis - INFO - Tracing field: net_amount
 2025-08-24 21:42:53,438 - tools.impact_analysis - INFO - Tracing field: clv_score
 2025-08-24 21:42:53,438 - tools.impact_analysis - INFO - Tracing field: email_hash
+2025-08-24 22:12:03,421 - impact_analysis - INFO - Loading lineage data from events directory
+2025-08-24 22:12:03,422 - impact_analysis - INFO - Loaded 14 events from CSV
+2025-08-24 22:12:03,422 - impact_analysis - INFO - Found 12 lineage JSON files
+2025-08-24 22:14:49,207 - impact_analysis - INFO - Tracing field: clv_score
+2025-08-24 22:15:04,633 - impact_analysis - INFO - Analyzing impact for: clv_score
+2025-08-24 22:15:13,458 - impact_analysis - INFO - Analyzing impact for: quantity
