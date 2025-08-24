@@ -1,0 +1,21 @@
+customer_id,name,email,phone,city,state,country,signup_date,status,segment
+1,John Smith,john.smith@email.com,555-0101,New York,NY,USA,2023-01-15,active,premium
+2,Sarah Johnson,sarah.j@email.com,555-0102,Los Angeles,CA,USA,2023-02-20,active,standard
+3,Mike Davis,mike.davis@email.com,555-0103,Chicago,IL,USA,2023-01-10,inactive,standard
+4,Emily Brown,emily.brown@email.com,555-0104,Houston,TX,USA,2023-03-05,active,premium
+5,David Wilson,david.w@email.com,555-0105,Phoenix,AZ,USA,2023-02-01,active,standard
+6,Lisa Garcia,lisa.garcia@email.com,555-0106,Philadelphia,PA,USA,2023-01-25,active,premium
+7,Robert Miller,robert.m@email.com,555-0107,San Antonio,TX,USA,2023-03-10,inactive,standard
+8,Jessica Rodriguez,jessica.r@email.com,555-0108,San Diego,CA,USA,2023-02-15,active,standard
+9,William Martinez,william.m@email.com,555-0109,Dallas,TX,USA,2023-01-20,active,premium
+10,Ashley Taylor,ashley.t@email.com,555-0110,San Jose,CA,USA,2023-03-01,active,standard
+11,James Anderson,james.a@email.com,555-0111,Austin,TX,USA,2023-02-10,inactive,standard
+12,Amanda Thomas,amanda.t@email.com,555-0112,Jacksonville,FL,USA,2023-01-30,active,premium
+13,Christopher Jackson,chris.j@email.com,555-0113,San Francisco,CA,USA,2023-03-15,active,standard
+14,Nicole White,nicole.w@email.com,555-0114,Indianapolis,IN,USA,2023-02-25,active,standard
+15,Matthew Harris,matthew.h@email.com,555-0115,Columbus,OH,USA,2023-01-05,inactive,premium
+16,Stephanie Martin,stephanie.m@email.com,555-0116,Fort Worth,TX,USA,2023-03-20,active,standard
+17,Daniel Thompson,daniel.t@email.com,555-0117,Charlotte,NC,USA,2023-02-05,active,premium
+18,Michelle Lewis,michelle.l@email.com,555-0118,Seattle,WA,USA,2023-01-12,active,standard
+19,Kevin Lee,kevin.lee@email.com,555-0119,Denver,CO,USA,2023-03-08,inactive,standard
+20,Jennifer Clark,jennifer.c@email.com,555-0120,Boston,MA,USA,2023-02-18,active,premium

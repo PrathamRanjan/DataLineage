@@ -1,0 +1,15 @@
+{
+  "eventType": "START",
+  "eventTime": "2025-08-16T22:37:00.701245",
+  "run": {
+    "runId": "8fc524fe-9238-488d-bc09-f963056b9532",
+    "facets": {}
+  },
+  "job": {
+    "namespace": "ecommerce",
+    "name": "etl_orders",
+    "facets": {}
+  },
+  "inputs": [],
+  "outputs": []
+}

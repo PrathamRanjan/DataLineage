@@ -1,0 +1,80 @@
+2025-08-24 15:43:53,749 - __main__ - INFO - Loading lineage data from events directory
+2025-08-24 15:43:53,752 - __main__ - INFO - Loaded 6 events from CSV
+2025-08-24 15:43:53,752 - __main__ - INFO - Found 4 lineage JSON files
+2025-08-24 15:43:53,753 - __main__ - INFO - Tracing field: net_amount
+2025-08-24 15:43:58,521 - __main__ - INFO - Loading lineage data from events directory
+2025-08-24 15:43:58,523 - __main__ - INFO - Loaded 6 events from CSV
+2025-08-24 15:43:58,523 - __main__ - INFO - Found 4 lineage JSON files
+2025-08-24 15:43:58,524 - __main__ - INFO - Running lineage validation
+2025-08-24 15:44:03,870 - __main__ - INFO - Loading lineage data from events directory
+2025-08-24 15:44:03,874 - __main__ - INFO - Loaded 6 events from CSV
+2025-08-24 15:44:03,874 - __main__ - INFO - Found 4 lineage JSON files
+2025-08-24 15:55:23,528 - __main__ - INFO - Loading lineage data from events directory
+2025-08-24 15:55:23,535 - __main__ - INFO - Loaded 8 events from CSV
+2025-08-24 15:55:23,536 - __main__ - INFO - Found 6 lineage JSON files
+2025-08-24 15:55:23,540 - __main__ - INFO - Tracing field: net_amount
+2025-08-24 15:55:28,153 - __main__ - INFO - Loading lineage data from events directory
+2025-08-24 15:55:28,155 - __main__ - INFO - Loaded 8 events from CSV
+2025-08-24 15:55:28,155 - __main__ - INFO - Found 6 lineage JSON files
+2025-08-24 15:55:28,156 - __main__ - INFO - Tracing field: clv_score
+2025-08-24 15:55:33,121 - __main__ - INFO - Loading lineage data from events directory
+2025-08-24 15:55:33,132 - __main__ - INFO - Loaded 8 events from CSV
+2025-08-24 15:55:33,133 - __main__ - INFO - Found 6 lineage JSON files
+2025-08-24 15:55:33,135 - __main__ - INFO - Analyzing impact for: quantity
+2025-08-24 15:55:37,459 - __main__ - INFO - Loading lineage data from events directory
+2025-08-24 15:55:37,462 - __main__ - INFO - Loaded 8 events from CSV
+2025-08-24 15:55:37,462 - __main__ - INFO - Found 6 lineage JSON files
+2025-08-24 15:55:37,462 - __main__ - INFO - Running lineage validation
+2025-08-24 15:55:42,442 - __main__ - INFO - Loading lineage data from events directory
+2025-08-24 15:55:42,444 - __main__ - INFO - Loaded 8 events from CSV
+2025-08-24 15:55:42,445 - __main__ - INFO - Found 6 lineage JSON files
+2025-08-24 16:01:50,396 - __main__ - INFO - Loading lineage data from events directory
+2025-08-24 16:01:50,400 - __main__ - INFO - Loaded 8 events from CSV
+2025-08-24 16:01:50,400 - __main__ - INFO - Found 6 lineage JSON files
+2025-08-24 16:01:50,403 - __main__ - INFO - Tracing field: customers_daily.csv.clv_score
+2025-08-24 16:01:50,403 - __main__ - ERROR - Command failed: Field 'customers_daily.csv.clv_score' not found. Available fields: ['email_hash', 'email', 'is_high_value', 'total_spent', 'total_orders', 'clv_score', 'total_quantity', 'engagement_level', 'net_amount', 'quantity', 'unit_price', 'discount', 'total_value', 'estimated_profit', 'net_amount', 'order_size_category']
+2025-08-24 16:01:55,600 - __main__ - INFO - Loading lineage data from events directory
+2025-08-24 16:01:55,603 - __main__ - INFO - Loaded 8 events from CSV
+2025-08-24 16:01:55,603 - __main__ - INFO - Found 6 lineage JSON files
+2025-08-24 16:01:55,605 - __main__ - INFO - Tracing field: customers_daily.clv_score
+2025-08-24 16:02:00,302 - __main__ - INFO - Loading lineage data from events directory
+2025-08-24 16:02:00,304 - __main__ - INFO - Loaded 8 events from CSV
+2025-08-24 16:02:00,305 - __main__ - INFO - Found 6 lineage JSON files
+2025-08-24 16:02:00,305 - __main__ - INFO - Tracing field: email_hash
+2025-08-24 16:02:05,278 - __main__ - INFO - Loading lineage data from events directory
+2025-08-24 16:02:05,280 - __main__ - INFO - Loaded 8 events from CSV
+2025-08-24 16:02:05,280 - __main__ - INFO - Found 6 lineage JSON files
+2025-08-24 16:02:05,281 - __main__ - INFO - Analyzing impact for: orders.unit_price
+2025-08-24 16:30:17,284 - __main__ - INFO - Loading lineage data from events directory
+2025-08-24 16:30:17,289 - __main__ - INFO - Loaded 10 events from CSV
+2025-08-24 16:30:17,289 - __main__ - INFO - Found 8 lineage JSON files
+2025-08-24 16:30:17,292 - __main__ - INFO - Tracing field: net_amount
+2025-08-24 16:30:23,042 - __main__ - INFO - Loading lineage data from events directory
+2025-08-24 16:30:23,045 - __main__ - INFO - Loaded 10 events from CSV
+2025-08-24 16:30:23,045 - __main__ - INFO - Found 8 lineage JSON files
+2025-08-24 16:30:23,046 - __main__ - INFO - Tracing field: clv_score
+2025-08-24 16:30:42,498 - impact_analysis - INFO - Loading lineage data from events directory
+2025-08-24 16:30:42,499 - impact_analysis - INFO - Loaded 10 events from CSV
+2025-08-24 16:30:42,500 - impact_analysis - INFO - Found 8 lineage JSON files
+2025-08-24 16:31:43,511 - impact_analysis - INFO - Running lineage validation
+2025-08-24 16:32:54,026 - impact_analysis - INFO - Loading lineage data from events directory
+2025-08-24 16:32:54,028 - impact_analysis - INFO - Loaded 10 events from CSV
+2025-08-24 16:32:54,028 - impact_analysis - INFO - Found 8 lineage JSON files
+2025-08-24 16:33:19,898 - impact_analysis - INFO - Tracing field: customers_daily.csv.customer_id
+2025-08-24 16:34:50,936 - __main__ - INFO - Loading lineage data from events directory
+2025-08-24 16:34:50,940 - __main__ - INFO - Loaded 10 events from CSV
+2025-08-24 16:34:50,940 - __main__ - INFO - Found 8 lineage JSON files
+2025-08-24 16:34:50,942 - __main__ - INFO - Tracing field: customer_id
+2025-08-24 16:34:50,942 - __main__ - ERROR - Command failed: Field 'customer_id' not found. Available fields: ['email_hash', 'email', 'is_high_value', 'total_spent', 'total_orders', 'clv_score', 'total_quantity', 'engagement_level', 'net_amount', 'quantity', 'unit_price', 'discount', 'total_value', 'estimated_profit', 'net_amount', 'order_size_category']
+2025-08-24 16:35:01,107 - __main__ - INFO - Loading lineage data from events directory
+2025-08-24 16:35:01,110 - __main__ - INFO - Loaded 10 events from CSV
+2025-08-24 16:35:01,110 - __main__ - INFO - Found 8 lineage JSON files
+2025-08-24 16:35:01,112 - __main__ - INFO - Tracing field: clv_score
+2025-08-24 16:36:00,154 - impact_analysis - INFO - Tracing field: clv_score
+2025-08-24 21:42:53,434 - tools.impact_analysis - INFO - Loading lineage data from events directory
+2025-08-24 21:42:53,436 - tools.impact_analysis - INFO - Loaded 12 events from CSV
+2025-08-24 21:42:53,436 - tools.impact_analysis - INFO - Found 10 lineage JSON files
+2025-08-24 21:42:53,438 - tools.impact_analysis - INFO - Running lineage validation
+2025-08-24 21:42:53,438 - tools.impact_analysis - INFO - Tracing field: net_amount
+2025-08-24 21:42:53,438 - tools.impact_analysis - INFO - Tracing field: clv_score
+2025-08-24 21:42:53,438 - tools.impact_analysis - INFO - Tracing field: email_hash

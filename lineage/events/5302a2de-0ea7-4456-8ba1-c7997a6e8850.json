@@ -1,0 +1,15 @@
+{
+  "eventType": "START",
+  "eventTime": "2025-08-24T21:42:53.057471",
+  "run": {
+    "runId": "5302a2de-0ea7-4456-8ba1-c7997a6e8850",
+    "facets": {}
+  },
+  "job": {
+    "namespace": "scalability_test",
+    "name": "large_dataset_etl",
+    "facets": {}
+  },
+  "inputs": [],
+  "outputs": []
+}

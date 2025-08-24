@@ -1,0 +1,88 @@
+{
+  "eventType": "RUNNING",
+  "eventTime": "2025-08-24T15:55:10.514646",
+  "run": {
+    "runId": "42e4e669-7316-4336-b8fb-1842054951af",
+    "facets": {}
+  },
+  "inputs": [],
+  "outputs": [
+    {
+      "name": "customers_daily.csv",
+      "namespace": "processed_data",
+      "facets": {
+        "schema": [
+          {
+            "name": "customer_id",
+            "type": "int64"
+          },
+          {
+            "name": "name",
+            "type": "object"
+          },
+          {
+            "name": "email_hash",
+            "type": "object"
+          },
+          {
+            "name": "city",
+            "type": "object"
+          },
+          {
+            "name": "state",
+            "type": "object"
+          },
+          {
+            "name": "country",
+            "type": "object"
+          },
+          {
+            "name": "signup_date",
+            "type": "object"
+          },
+          {
+            "name": "segment",
+            "type": "object"
+          },
+          {
+            "name": "total_orders",
+            "type": "float64"
+          },
+          {
+            "name": "total_quantity",
+            "type": "float64"
+          },
+          {
+            "name": "avg_unit_price",
+            "type": "float64"
+          },
+          {
+            "name": "total_discount",
+            "type": "float64"
+          },
+          {
+            "name": "total_spent",
+            "type": "float64"
+          },
+          {
+            "name": "is_high_value",
+            "type": "bool"
+          },
+          {
+            "name": "clv_score",
+            "type": "float64"
+          },
+          {
+            "name": "engagement_level",
+            "type": "object"
+          }
+        ],
+        "rowCount": 15
+      }
+    }
+  ],
+  "schema_facets": {},
+  "row_counts": {
+    "customers_daily.csv": 15
+  }
+}

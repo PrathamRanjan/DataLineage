@@ -1,0 +1,26 @@
+order_id,customer_id,product_name,category,quantity,unit_price,discount,order_date,status,payment_method
+1001,1,Laptop Pro,Electronics,1,1299.99,50.00,2023-03-01,completed,credit_card
+1002,2,Wireless Headphones,Electronics,2,199.99,0.00,2023-03-02,completed,paypal
+1003,3,Coffee Maker,Appliances,1,89.99,10.00,2023-03-01,cancelled,credit_card
+1004,1,External Monitor,Electronics,1,349.99,25.00,2023-03-03,completed,credit_card
+1005,4,Running Shoes,Sports,1,129.99,15.00,2023-03-02,completed,debit_card
+1006,5,Desk Chair,Furniture,1,249.99,30.00,2023-03-04,pending,credit_card
+1007,2,Smartphone Case,Electronics,3,24.99,0.00,2023-03-03,completed,paypal
+1008,6,Kitchen Knife Set,Kitchen,1,79.99,5.00,2023-03-05,completed,credit_card
+1009,7,Yoga Mat,Sports,2,39.99,0.00,2023-03-04,cancelled,debit_card
+1010,8,Book Collection,Books,5,19.99,2.00,2023-03-06,completed,credit_card
+1011,9,Gaming Mouse,Electronics,1,69.99,10.00,2023-03-05,completed,credit_card
+1012,10,Water Bottle,Sports,2,29.99,0.00,2023-03-07,pending,paypal
+1013,4,Bluetooth Speaker,Electronics,1,159.99,20.00,2023-03-06,completed,debit_card
+1014,11,Office Supplies,Office,1,49.99,5.00,2023-03-08,cancelled,credit_card
+1015,12,Tablet,Electronics,1,399.99,40.00,2023-03-07,completed,credit_card
+1016,13,Backpack,Travel,1,79.99,8.00,2023-03-09,completed,paypal
+1017,14,Smartwatch,Electronics,1,299.99,30.00,2023-03-08,pending,credit_card
+1018,15,Home Decor Set,Home,3,34.99,0.00,2023-03-10,completed,debit_card
+1019,16,Fitness Tracker,Sports,1,199.99,25.00,2023-03-09,completed,credit_card
+1020,17,Wireless Charger,Electronics,2,49.99,5.00,2023-03-11,completed,paypal
+1021,18,Kitchen Scale,Kitchen,1,39.99,0.00,2023-03-10,pending,credit_card
+1022,19,Phone Stand,Electronics,1,19.99,2.00,2023-03-12,cancelled,debit_card
+1023,20,Air Purifier,Appliances,1,199.99,20.00,2023-03-11,completed,credit_card
+1024,1,USB Drive,Electronics,3,15.99,0.00,2023-03-13,completed,credit_card
+1025,2,Portable Battery,Electronics,1,79.99,8.00,2023-03-12,completed,paypal

@@ -1,0 +1,16 @@
+customer_id,name,email_hash,city,state,country,signup_date,segment,total_orders,total_quantity,avg_unit_price,total_discount,total_spent,is_high_value,clv_score,engagement_level
+1,John Smith,ffa7ca146a200566,New York,NY,USA,2023-01-15,premium,3.0,5.0,555.3233333333334,75.0,1622.95,True,1173.77,medium
+2,Sarah Johnson,9fe6ecf3bde04c2a,Los Angeles,CA,USA,2023-02-20,standard,3.0,6.0,101.65666666666668,8.0,546.94,True,538.164,medium
+4,Emily Brown,d34f178d2e637941,Houston,TX,USA,2023-03-05,premium,2.0,2.0,144.99,35.0,254.98000000000002,False,272.988,low
+5,David Wilson,62755b1247ddb8fe,Phoenix,AZ,USA,2023-02-01,standard,0.0,0.0,0.0,0.0,0.0,False,0.0,inactive
+6,Lisa Garcia,2b0d496b2f25a165,Philadelphia,PA,USA,2023-01-25,premium,1.0,1.0,79.99,5.0,74.99,False,104.994,low
+8,Jessica Rodriguez,55f446e70af45569,San Diego,CA,USA,2023-02-15,standard,1.0,5.0,19.99,2.0,97.94999999999999,False,158.76999999999998,low
+9,William Martinez,0b7b2f11d3fe690e,Dallas,TX,USA,2023-01-20,premium,1.0,1.0,69.99,10.0,59.989999999999995,False,95.994,low
+10,Ashley Taylor,d22ff104c5d2e729,San Jose,CA,USA,2023-03-01,standard,0.0,0.0,0.0,0.0,0.0,False,0.0,inactive
+12,Amanda Thomas,d5dd073730ef7579,Jacksonville,FL,USA,2023-01-30,premium,1.0,1.0,399.99,40.0,359.99,False,275.994,low
+13,Christopher Jackson,83cb33f10d921377,San Francisco,CA,USA,2023-03-15,standard,1.0,1.0,79.99,8.0,71.99,False,103.19399999999999,low
+14,Nicole White,9bbb76763f7feba7,Indianapolis,IN,USA,2023-02-25,standard,0.0,0.0,0.0,0.0,0.0,False,0.0,inactive
+16,Stephanie Martin,aba7f5abfd3a5b3d,Fort Worth,TX,USA,2023-03-20,standard,1.0,1.0,199.99,25.0,174.99,False,164.994,low
+17,Daniel Thompson,6c5fce98a6fa1987,Charlotte,NC,USA,2023-02-05,premium,1.0,2.0,49.99,5.0,94.98,False,126.988,low
+18,Michelle Lewis,92b53af6b7f123f5,Seattle,WA,USA,2023-01-12,standard,0.0,0.0,0.0,0.0,0.0,False,0.0,inactive
+20,Jennifer Clark,498e1fb65549c1b7,Boston,MA,USA,2023-02-18,premium,1.0,1.0,199.99,20.0,179.99,False,167.994,low

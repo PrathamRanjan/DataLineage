@@ -1,0 +1,27 @@
+{
+  "eventType": "COLUMN_LINEAGE",
+  "eventTime": "2025-08-24T21:42:53.418889",
+  "run": {
+    "runId": "5302a2de-0ea7-4456-8ba1-c7997a6e8850"
+  },
+  "columnLineage": {
+    "fields": [
+      {
+        "downstream": "net_amount",
+        "upstream": [
+          "quantity",
+          "unit_price",
+          "discount"
+        ],
+        "transformation": "quantity * unit_price - discount"
+      },
+      {
+        "downstream": "profit_margin",
+        "upstream": [
+          "net_amount"
+        ],
+        "transformation": "net_amount * 0.25"
+      }
+    ]
+  }
+}

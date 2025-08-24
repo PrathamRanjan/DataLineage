@@ -1,0 +1,35 @@
+{
+  "eventType": "RUNNING",
+  "eventTime": "2025-08-24T21:42:53.431607",
+  "run": {
+    "runId": "6be32d0e-cc87-4e5e-a6b2-02e1e91ae043",
+    "facets": {}
+  },
+  "inputs": [
+    {
+      "name": "products.csv",
+      "namespace": "raw_data",
+      "facets": {
+        "rowCount": 1000
+      }
+    },
+    {
+      "name": "suppliers.json",
+      "namespace": "raw_data",
+      "facets": {
+        "rowCount": 100
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "name": "products_enhanced.csv",
+      "namespace": "processed_data",
+      "facets": {
+        "rowCount": 1000
+      }
+    }
+  ],
+  "schema_facets": {},
+  "row_counts": {}
+}

@@ -1,0 +1,42 @@
+{
+  "eventType": "COLUMN_LINEAGE",
+  "eventTime": "2025-08-16T22:33:48.585513",
+  "run": {
+    "runId": "e88f93e7-a9f3-4edb-97cf-6f35354a6908"
+  },
+  "columnLineage": {
+    "fields": [
+      {
+        "downstream": "email_hash",
+        "upstream": [
+          "email"
+        ],
+        "transformation": "sha256_hash(email)[:16]"
+      },
+      {
+        "downstream": "is_high_value",
+        "upstream": [
+          "total_spent",
+          "total_orders"
+        ],
+        "transformation": "(total_spent > 500) OR (total_orders > 5)"
+      },
+      {
+        "downstream": "clv_score",
+        "upstream": [
+          "total_spent",
+          "total_orders",
+          "total_quantity"
+        ],
+        "transformation": "total_spent * 0.6 + total_orders * 50 + total_quantity * 10"
+      },
+      {
+        "downstream": "engagement_level",
+        "upstream": [
+          "total_orders"
+        ],
+        "transformation": "categorize_engagement(total_orders)"
+      }
+    ]
+  }
+}

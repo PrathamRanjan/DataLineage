@@ -1,0 +1,11 @@
+{
+  "eventType": "COMPLETE",
+  "eventTime": "2025-08-16T22:37:06.176257",
+  "run": {
+    "runId": "6a74f5a1-ff78-4d81-bbc0-2a347867cec8",
+    "facets": {
+      "status": "COMPLETED",
+      "duration_ms": 7
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "eventType": "COLUMN_LINEAGE",
+  "eventTime": "2025-08-24T21:42:53.431725",
+  "run": {
+    "runId": "6be32d0e-cc87-4e5e-a6b2-02e1e91ae043"
+  },
+  "columnLineage": {
+    "fields": [
+      {
+        "downstream": "markup_percentage",
+        "upstream": [
+          "retail_price",
+          "cost_price"
+        ],
+        "transformation": "(retail_price - cost_price) / cost_price * 100"
+      },
+      {
+        "downstream": "inventory_value",
+        "upstream": [
+          "inventory_count",
+          "cost_price"
+        ],
+        "transformation": "inventory_count * cost_price"
+      }
+    ]
+  }
+}

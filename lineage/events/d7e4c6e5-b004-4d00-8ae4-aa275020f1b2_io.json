@@ -1,0 +1,114 @@
+{
+  "eventType": "RUNNING",
+  "eventTime": "2025-08-16T22:33:21.084459",
+  "run": {
+    "runId": "d7e4c6e5-b004-4d00-8ae4-aa275020f1b2",
+    "facets": {}
+  },
+  "inputs": [
+    {
+      "name": "orders.csv",
+      "namespace": "raw_data",
+      "facets": {
+        "schema": [
+          {
+            "name": "order_id",
+            "type": "int64"
+          },
+          {
+            "name": "customer_id",
+            "type": "int64"
+          },
+          {
+            "name": "product_name",
+            "type": "object"
+          },
+          {
+            "name": "category",
+            "type": "object"
+          },
+          {
+            "name": "quantity",
+            "type": "int64"
+          },
+          {
+            "name": "unit_price",
+            "type": "float64"
+          },
+          {
+            "name": "discount",
+            "type": "float64"
+          },
+          {
+            "name": "order_date",
+            "type": "object"
+          },
+          {
+            "name": "status",
+            "type": "object"
+          },
+          {
+            "name": "payment_method",
+            "type": "object"
+          }
+        ],
+        "rowCount": 25
+      }
+    },
+    {
+      "name": "customers.csv",
+      "namespace": "raw_data",
+      "facets": {
+        "schema": [
+          {
+            "name": "customer_id",
+            "type": "int64"
+          },
+          {
+            "name": "name",
+            "type": "object"
+          },
+          {
+            "name": "email",
+            "type": "object"
+          },
+          {
+            "name": "phone",
+            "type": "object"
+          },
+          {
+            "name": "city",
+            "type": "object"
+          },
+          {
+            "name": "state",
+            "type": "object"
+          },
+          {
+            "name": "country",
+            "type": "object"
+          },
+          {
+            "name": "signup_date",
+            "type": "object"
+          },
+          {
+            "name": "status",
+            "type": "object"
+          },
+          {
+            "name": "segment",
+            "type": "object"
+          }
+        ],
+        "rowCount": 20
+      }
+    }
+  ],
+  "outputs": [],
+  "schema_facets": {},
+  "row_counts": {
+    "orders.csv": 25,
+    "customers.csv": 20
+  }
+}

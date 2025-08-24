@@ -1,0 +1,264 @@
+# Data Lineage POC - Glossary
+# Comprehensive field definitions, data types, PII flags, and transformation documentation
+
+datasets:
+  raw_data:
+    customers.csv:
+      description: "Raw customer master data containing personal and account information"
+      owner: "Customer Data Team"
+      fields:
+        customer_id:
+          type: "integer"
+          description: "Unique identifier for customer"
+          pii: false
+          primary_key: true
+        name:
+          type: "string"
+          description: "Customer full name"
+          pii: true
+          sensitive: true
+        email:
+          type: "string" 
+          description: "Customer email address"
+          pii: true
+          sensitive: true
+        phone:
+          type: "string"
+          description: "Customer phone number"
+          pii: true
+          sensitive: true
+        city:
+          type: "string"
+          description: "Customer city of residence"
+          pii: false
+        state:
+          type: "string"
+          description: "Customer state/province"
+          pii: false
+        country:
+          type: "string"
+          description: "Customer country"
+          pii: false
+        signup_date:
+          type: "date"
+          description: "Date when customer signed up"
+          pii: false
+        status:
+          type: "string"
+          description: "Customer account status (active/inactive)"
+          pii: false
+          valid_values: ["active", "inactive"]
+        segment:
+          type: "string"
+          description: "Customer tier/segment classification"
+          pii: false
+          valid_values: ["premium", "standard"]
+
+    orders.csv:
+      description: "Transaction data for all customer orders"
+      owner: "Sales Data Team"
+      fields:
+        order_id:
+          type: "integer"
+          description: "Unique identifier for order"
+          pii: false
+          primary_key: true
+        customer_id:
+          type: "integer"
+          description: "Foreign key to customers table"
+          pii: false
+          foreign_key: "customers.customer_id"
+        product_name:
+          type: "string"
+          description: "Name of purchased product"
+          pii: false
+        category:
+          type: "string"
+          description: "Product category classification"
+          pii: false
+        quantity:
+          type: "integer"
+          description: "Number of units ordered"
+          pii: false
+        unit_price:
+          type: "float"
+          description: "Price per unit in USD"
+          pii: false
+        discount:
+          type: "float"
+          description: "Total discount applied in USD"
+          pii: false
+        order_date:
+          type: "date"
+          description: "Date when order was placed"
+          pii: false
+        status:
+          type: "string"
+          description: "Current order status"
+          pii: false
+          valid_values: ["completed", "pending", "cancelled"]
+        payment_method:
+          type: "string"
+          description: "Method used for payment"
+          pii: false
+          valid_values: ["credit_card", "debit_card", "paypal"]
+
+  processed_data:
+    orders_clean.csv:
+      description: "Enriched order data with customer information and calculated fields"
+      owner: "Analytics Team"
+      fields:
+        net_amount:
+          type: "float"
+          description: "Calculated net order value after discount"
+          pii: false
+          calculation: "quantity * unit_price - discount"
+        total_value:
+          type: "float"
+          description: "Gross order value before discount"
+          pii: false
+          calculation: "quantity * unit_price"
+        estimated_profit:
+          type: "float"
+          description: "Estimated profit assuming 30% margin"
+          pii: false
+          calculation: "net_amount * 0.30"
+        order_size_category:
+          type: "string"
+          description: "Categorized order size based on net amount"
+          pii: false
+          calculation: "categorize_order_size(net_amount)"
+          valid_values: ["small", "medium", "large"]
+          business_rules:
+            small: "net_amount < $50"
+            medium: "$50 <= net_amount < $200" 
+            large: "net_amount >= $200"
+
+    customers_daily.csv:
+      description: "Daily customer analytics with privacy-protected data and enrichment"
+      owner: "Analytics Team"
+      fields:
+        email_hash:
+          type: "string"
+          description: "SHA256 hash of email (first 16 chars) for privacy"
+          pii: false
+          calculation: "sha256_hash(email)[:16]"
+          privacy_protection: true
+        total_orders:
+          type: "integer"
+          description: "Count of completed orders per customer"
+          pii: false
+          calculation: "COUNT(orders WHERE status='completed')"
+        total_quantity:
+          type: "integer"
+          description: "Sum of all quantities ordered"
+          pii: false
+          calculation: "SUM(quantity FROM completed orders)"
+        avg_unit_price:
+          type: "float"
+          description: "Average unit price across all orders"
+          pii: false
+          calculation: "MEAN(unit_price FROM completed orders)"
+        total_discount:
+          type: "float"
+          description: "Total discount received by customer"
+          pii: false
+          calculation: "SUM(discount FROM completed orders)"
+        total_spent:
+          type: "float"
+          description: "Total net amount spent by customer"
+          pii: false
+          calculation: "SUM(net_amount FROM completed orders)"
+        is_high_value:
+          type: "boolean"
+          description: "Flag indicating high-value customer"
+          pii: false
+          calculation: "(total_spent > 500) OR (total_orders > 5)"
+          business_significance: "Used for targeted marketing campaigns"
+        clv_score:
+          type: "float"
+          description: "Customer Lifetime Value score"
+          pii: false
+          calculation: "total_spent * 0.6 + total_orders * 50 + total_quantity * 10"
+          business_significance: "Weighted score for customer ranking"
+        engagement_level:
+          type: "string"
+          description: "Customer engagement classification"
+          pii: false
+          calculation: "categorize_engagement(total_orders)"
+          valid_values: ["inactive", "low", "medium", "high"]
+          business_rules:
+            inactive: "0 orders"
+            low: "1-2 orders"
+            medium: "3-5 orders"
+            high: "6+ orders"
+
+transformations:
+  etl_orders:
+    description: "Enriches order data with customer information and business metrics"
+    inputs: ["customers.csv", "orders.csv"]
+    outputs: ["orders_clean.csv"]
+    key_transformations:
+      - name: "customer_join"
+        description: "LEFT JOIN orders with customers on customer_id"
+        business_purpose: "Enrich orders with customer demographic data"
+      - name: "net_amount_calculation"
+        description: "Calculate net order value after discounts"
+        formula: "quantity * unit_price - discount"
+        business_purpose: "Determine actual revenue per order"
+      - name: "order_categorization"
+        description: "Categorize orders by size for business analysis"
+        business_purpose: "Enable size-based reporting and customer segmentation"
+
+  etl_customers_daily:
+    description: "Creates privacy-protected customer analytics with behavioral metrics"
+    inputs: ["customers.csv", "orders.csv"]
+    outputs: ["customers_daily.csv"]
+    key_transformations:
+      - name: "email_hashing"
+        description: "Hash email addresses for privacy protection"
+        privacy_rationale: "Enables analytics while protecting PII"
+        method: "SHA256 hash truncated to 16 characters"
+      - name: "order_aggregation"
+        description: "Aggregate order metrics per customer"
+        business_purpose: "Calculate customer purchasing behavior metrics"
+      - name: "high_value_classification"
+        description: "Identify high-value customers for marketing"
+        business_purpose: "Enable targeted retention and upselling campaigns"
+      - name: "clv_scoring"
+        description: "Calculate composite customer lifetime value score"
+        business_purpose: "Prioritize customer support and marketing efforts"
+
+data_quality_rules:
+  - field: "customer_id"
+    rule: "Must be unique and non-null"
+  - field: "email"
+    rule: "Must be valid email format"
+  - field: "order_date"
+    rule: "Must be valid date, not future date"
+  - field: "quantity"
+    rule: "Must be positive integer"
+  - field: "unit_price"
+    rule: "Must be positive number"
+  - field: "discount"
+    rule: "Must be non-negative, less than total order value"
+
+privacy_compliance:
+  pii_fields: ["name", "email", "phone"]
+  protection_methods:
+    - "Email hashing in processed datasets"
+    - "No storage of raw PII in analytics outputs"
+  retention_policy: "Raw data retained for 7 years, processed data indefinitely"
+  access_controls: "Raw data restricted to data engineering team"
+
+business_context:
+  use_cases:
+    - "Customer segmentation and targeting"
+    - "Order analysis and revenue reporting" 
+    - "Customer lifetime value modeling"
+    - "Marketing campaign effectiveness"
+  stakeholders:
+    - "Marketing Team (primary consumer of customer analytics)"
+    - "Sales Team (order trend analysis)"
+    - "Finance Team (revenue reporting)"
+    - "Product Team (usage pattern analysis)"
